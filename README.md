@@ -1,6 +1,5 @@
 # grunt-safaridriver
 [![NPM version](https://badge.fury.io/js/grunt-safaridriver.png)](http://badge.fury.io/js/grunt-safaridriver)
-[![Build Status](https://travis-ci.org/prantlf/grunt-safaridriver.png)](https://travis-ci.org/prantlf/grunt-safaridriver)
 [![codecov](https://codecov.io/gh/prantlf/grunt-safaridriver/branch/master/graph/badge.svg)](https://codecov.io/gh/prantlf/grunt-safaridriver)
 [![codebeat badge](https://codebeat.co/badges/1777e780-ea70-4ebd-8f5a-df278c5761d6)](https://codebeat.co/projects/github-com-prantlf-grunt-safaridriver-master)
 [![Dependency Status](https://david-dm.org/prantlf/grunt-safaridriver.svg)](https://david-dm.org/prantlf/grunt-safaridriver)
