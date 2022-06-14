@@ -123,7 +123,7 @@ your code using Grunt.
 
 ## License
 
-Copyright (c) 2020 Ferdinand Prantl
+Copyright (c) 2020-2022 Ferdinand Prantl
 
 Licensed under the MIT license.
 
