@@ -1,12 +1,10 @@
 # grunt-safaridriver
-[![NPM version](https://badge.fury.io/js/grunt-safaridriver.png)](http://badge.fury.io/js/grunt-safaridriver)
-[![codecov](https://codecov.io/gh/prantlf/grunt-safaridriver/branch/master/graph/badge.svg)](https://codecov.io/gh/prantlf/grunt-safaridriver)
-[![codebeat badge](https://codebeat.co/badges/1777e780-ea70-4ebd-8f5a-df278c5761d6)](https://codebeat.co/projects/github-com-prantlf-grunt-safaridriver-master)
-[![Dependency Status](https://david-dm.org/prantlf/grunt-safaridriver.svg)](https://david-dm.org/prantlf/grunt-safaridriver)
-[![devDependency Status](https://david-dm.org/prantlf/grunt-safaridriver/dev-status.svg)](https://david-dm.org/prantlf/grunt-safaridriver#info=devDependencies)
-[![peerDependency Status](https://david-dm.org/prantlf/grunt-safaridriver/peer-status.svg)](https://david-dm.org/prantlf/grunt-safaridriver#info=peerDependencies)
 
-[![NPM Downloads](https://nodei.co/npm/grunt-safaridriver.png?downloads=true&stars=true)](https://www.npmjs.com/package/grunt-safaridriver)
+[![Latest version](https://img.shields.io/npm/v/grunt-safaridriver)
+ ![Dependency status](https://img.shields.io/librariesio/release/npm/grunt-safaridriver)
+](https://www.npmjs.com/package/grunt-safaridriver)
+[![Coverage](https://codecov.io/gh/prantlf/grunt-safaridriver/branch/master/graph/badge.svg)](https://codecov.io/gh/prantlf/grunt-safaridriver)
+[![codebeat badge](https://codebeat.co/badges/1777e780-ea70-4ebd-8f5a-df278c5761d6)](https://codebeat.co/projects/github-com-prantlf-grunt-safaridriver-master)
 
 Controls Safari on OSX using the WebDriver interface via safaridriver without Selenium.
 

@@ -1,5 +1,4 @@
 module.exports = function (grunt) {
-  const coverage = grunt.option('coverage')
   const alternativePort = '9517'
 
   grunt.initConfig({
@@ -21,27 +20,6 @@ module.exports = function (grunt) {
       }
     },
 
-    instrument: {
-      files: 'tasks/**/*.js',
-      options: {
-        lazy: true,
-        basePath: 'coverage/'
-      }
-    },
-
-    storeCoverage: {
-      options: { dir: 'coverage' }
-    },
-
-    makeReport: {
-      src: 'coverage/coverage.json',
-      options: {
-        type: 'lcov',
-        dir: 'coverage',
-        print: 'detail'
-      }
-    },
-
     nodeunit: {
       started: ['test/started.js'],
       stopped: ['test/stopped.js']
@@ -49,22 +27,18 @@ module.exports = function (grunt) {
   })
 
   grunt.loadNpmTasks('grunt-contrib-nodeunit')
-  grunt.loadNpmTasks('grunt-istanbul')
-  grunt.loadNpmTasks('grunt-standard')
-  grunt.loadTasks(coverage ? 'coverage/tasks' : 'tasks')
+  grunt.loadTasks('tasks')
 
   process.env.SAFARIDRIVER_PORT = undefined
   grunt.registerTask('switchPort', 'Grunt task switching the safaridriver port.', function () {
     process.env.SAFARIDRIVER_PORT = alternativePort
   })
 
-  let test = [
-    'standard', 'nodeunit:stopped', 'safaridriver:quiet:start',
+  grunt.registerTask('default', [
+    'nodeunit:stopped', 'safaridriver:quiet:start',
     'nodeunit:started', 'safaridriver:quiet:stop',
     'nodeunit:stopped', 'safaridriver:verbose:start', 'switchPort',
     'nodeunit:started', 'safaridriver:verbose:stop', 'nodeunit:stopped',
     'safaridriver:otherPort:start', 'nodeunit:started'
-  ]
-  if (coverage) test = test.concat(['storeCoverage', 'makeReport'])
-  grunt.registerTask('default', test)
+  ])
 }
