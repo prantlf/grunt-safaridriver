@@ -8,6 +8,7 @@ function getPortFromArgs (args) {
   let port
   if (args.some(arg => (port = /--port=(\d+)/.exec(arg)))) return +port[1]
   args.some(arg => {
+    /* c8 ignore next 5 */
     if (arg === '--port' || arg === '-p') port = true
     else if (port) {
       port = +arg
@@ -27,6 +28,7 @@ function finalizeArgs (options) {
     return {
       args: args
         .filter(arg => {
+          /* c8 ignore next 8 */
           if (skip) {
             skip = false
             return false
